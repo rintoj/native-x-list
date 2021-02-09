@@ -1,0 +1,43 @@
+{
+  "name": "native-x-list",
+  "version": "0.0.0-development",
+  "description": "List component",
+  "main": "lib/index.js",
+  "repository": "https://github.com/rintoj/native-x-list.git",
+  "author": "Rinto Jose <rintoj@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "yarn run lint && rimraf lib && tsc",
+    "lint": "eslint src/**/*.ts? --fix && tsc -p . --noEmit && yarn prettier",
+    "prettier": "prettier --write \"src/**/*.{ts,tsx}\" -c",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "@types/react-native": "^0.63.46",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-native": "^3.10.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-native": "^0.63.4",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.3.8",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "native-x-spacer": "^1.0.0",
+    "native-x-spinner": "^1.0.0",
+    "native-x-stack": "^1.0.5",
+    "native-x-tappable": "^1.0.1",
+    "native-x-text": "^1.0.0",
+    "tachyons-react-native": "^1.0.4"
+  }
+}
