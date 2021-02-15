@@ -164,7 +164,7 @@ export function List<S>({
   const listRef = useRef<FlatList<S>>()
   const [visibleItems, setVisibleItems] = useState(items)
   const { getColor } = useTheme()
-  const dividerColor = getColor(COLOR.DIVIDER)
+  const dividerColor = getColor?.(COLOR.DIVIDER)
   const containerStyle = useContainerStyle(props)
 
   const idExtractor = useCallback(

@@ -38,6 +38,7 @@
     "native-x-stack": "^1.0.5",
     "native-x-tappable": "^1.0.1",
     "native-x-text": "^1.0.0",
+    "native-x-theme": "^1.0.6",
     "tachyons-react-native": "^1.0.4"
   }
 }
