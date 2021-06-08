@@ -5716,48 +5716,39 @@ native-x-spacer@^1.0.0:
   dependencies:
     tachyons-react-native "^1.0.4"
 
-native-x-spinner@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/native-x-spinner/-/native-x-spinner-1.0.0.tgz#f3ab40f7d44ea06b675ed6929e0a2267c8b67867"
-  integrity sha512-VtciAUHih4WHTfaixYhZ9e+OfZktGu9xtx9OI9tuHETUSxZeTWhmcDP6SSSRlRp+eoom6FspnpiS18G7+tJIHQ==
-  dependencies:
-    native-x-theme "^1.0.4"
-    tachyons-react-native "^1.0.4"
-
-native-x-stack@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/native-x-stack/-/native-x-stack-1.0.5.tgz#eca94b7c5afd9f043e8b05e91c6ddfd5c93fbfe5"
-  integrity sha512-Fsi/CDd49Q9ufyUOsO8B0+TKoyFpnK2veGZxUTWxsdbdxnMjD1Vh8TDRiI3MjT9C9dNfysrwSjGrx6eaLPOdag==
-  dependencies:
-    native-x-theme "^1.0.4"
-    tachyons-react-native "^1.0.4"
-
-native-x-tappable@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/native-x-tappable/-/native-x-tappable-1.0.1.tgz#22c8b73136ce8cbe9d5b6e71fb0ad3d83279b9cc"
-  integrity sha512-LikTo472JnQrdEvzUXDh46+7X64W1J0gbR1Q/I6FJVqiGxbZrS8K8muG0z7Ky144cbjT/CWxEuXuTQu/lPOwSw==
-  dependencies:
-    lodash "^4.17.20"
-
-native-x-text@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/native-x-text/-/native-x-text-1.0.0.tgz#a40fb0e89fc9d90e85574e1775f40a7dba4b2433"
-  integrity sha512-UwDr4MpQo0dO7xWwTch5Xp0pY/I/n3cvNUz9AMEXjSXJBivozspCTLSuazReYHrFC1PUvB8kpTZq9CWlcS2qTw==
-  dependencies:
-    native-x-theme "^1.0.4"
-    tachyons-react-native "^1.0.4"
-
-native-x-theme@^1.0.4:
+native-x-spinner@^1.0.2:
   version "1.0.4"
-  resolved "https://registry.yarnpkg.com/native-x-theme/-/native-x-theme-1.0.4.tgz#da9ebbb6a1365056cf551137ba2fd91c5feb36c4"
-  integrity sha512-9+bXPDqrJAxtnB/HVwrD713E8l7Q6XNaKTHRTRF19x79qDhWh7zBI7sgZRSTzkLB5ab3yGEA/RJkgPgTIl0IWQ==
+  resolved "https://registry.yarnpkg.com/native-x-spinner/-/native-x-spinner-1.0.4.tgz#a4645772c76f48e3b7c8b58f66c02c69b2dda557"
+  integrity sha512-aDB+O9E0taAsdCGbGQm/X8iq6a4l70qkLdfDHsNo+ZYYUb9Jy3JY7Ps8gTEM5C+j0qu9G9rAlhcvp5ScP8fiWQ==
   dependencies:
+    native-x-theme "^1.0.9"
     tachyons-react-native "^1.0.4"
 
-native-x-theme@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/native-x-theme/-/native-x-theme-1.0.6.tgz#c4576d08b3ac88b094dc055b8991a3653b70367a"
-  integrity sha512-Tm2CC6KhfThPyBZXl5fvKxhfFTy2RZXFTo3Uw9oD6bVSuJsTQWwbHjZNKI5NYyCD6Mss9B1K0a9YO0WbSTWasw==
+native-x-stack@^1.0.7:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/native-x-stack/-/native-x-stack-1.0.10.tgz#9ccb18d954460c0cc565d54d45617a6880df5147"
+  integrity sha512-HzV/3aUsmyKMHAmV/pHUY7pQZWlcU0oidH8t1XnXuyKH1hKueybrG9dAnmnKwbw5ti0JzNklnCL1j0Eo71xVfw==
+  dependencies:
+    native-x-theme "^1.0.9"
+    tachyons-react-native "^1.0.4"
+
+native-x-tappable@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/native-x-tappable/-/native-x-tappable-1.0.3.tgz#556889eb312ab9d08bc1c5615d3eff9dd3b39dfe"
+  integrity sha512-1hPHNSFSMO/ToPOvy0zUo/uUKuXAiiKXpe8HmXbw5cIx3CyV2patKYLY/hEPUml4NNsLV5aj9AFTNmKRn/E3Vg==
+
+native-x-text@^1.0.3:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/native-x-text/-/native-x-text-1.0.5.tgz#b5bba145ef20f924e047fb9b7d3fe21a26540719"
+  integrity sha512-bc9clVPqvrVzdLKgfO6rTbZSm0Ox8dh6yFNtqpPqmybqMxWXOXO7drffPFUVXia41tCFs59Uv6o995hItY8mtA==
+  dependencies:
+    native-x-theme "^1.0.9"
+    tachyons-react-native "^1.0.4"
+
+native-x-theme@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/native-x-theme/-/native-x-theme-1.0.9.tgz#3a009c5e2ca5ead1a8f2a79650a9247f904f0bb4"
+  integrity sha512-O+uo9tAfOb5HcPqtibJ4smvdpKODy5JH9iovQnuy6j3K/I2pH9+n4k5B908JwXdBSZNBlLGp0EMB2gGp8crijg==
   dependencies:
     tachyons-react-native "^1.0.4"
 
