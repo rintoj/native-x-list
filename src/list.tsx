@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import _ from 'lodash'
-import { Spacer } from 'native-x-spacer'
+import groupByFn from 'lodash/groupBy'
 import { Spinner } from 'native-x-spinner'
 import { Stack } from 'native-x-stack'
 import { Tappable } from 'native-x-tappable'
@@ -192,7 +191,7 @@ export function List<S>({
     if (groupBy == undefined) {
       return undefined
     }
-    const groups = _.groupBy(visibleItems, groupBy)
+    const groups = groupByFn(visibleItems, groupBy)
     return Object.keys(groups).map(title => ({
       title: title === 'undefined' ? '' : title,
       data: groups[title],
@@ -332,15 +331,18 @@ export function List<S>({
     }
     return (
       <Stack fill alignCenter alignMiddle padding='normal'>
-        <Spacer size='normal' />
-        <Text bold fontSize='normal' alignCenter>
-          {emptyMessage.title}
-        </Text>
-        <Stack fill alignCenter alignMiddle padding={['horizontal:large', 'vertical:small']}>
-          <Text textColor={COLOR.SECONDARY} fontSize='small' alignCenter>
-            {emptyMessage.message}
+        {emptyMessage?.title != null ? (
+          <Text bold fontSize='normal' alignCenter textColor={COLOR.TERTIARY}>
+            {emptyMessage.title}
           </Text>
-        </Stack>
+        ) : null}
+        {emptyMessage?.message != null ? (
+          <Stack fill alignCenter alignMiddle padding={['horizontal:large', 'vertical:small']}>
+            <Text fontSize='small' alignCenter textColor={COLOR.TERTIARY}>
+              {emptyMessage.message}
+            </Text>
+          </Stack>
+        ) : null}
       </Stack>
     )
   }, [emptyMessage])
