@@ -34,10 +34,10 @@
   },
   "dependencies": {
     "native-x-spacer": "^1.0.0",
-    "native-x-spinner": "^1.0.2",
+    "native-x-spinner": "^1.0.5",
     "native-x-stack": "^1.0.11",
     "native-x-tappable": "^1.0.3",
-    "native-x-text": "^1.0.3",
+    "native-x-text": "^1.0.6",
     "tachyons-react-native": "^1.0.4"
   },
   "peerDependencies": {
