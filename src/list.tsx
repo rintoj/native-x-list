@@ -71,10 +71,8 @@ const styles = {
  */
 const maintainVisibleContentPosition = { minIndexForVisible: 0 }
 
-const LOADER_TYPE = '__LOADER__'
 const ERROR_TYPE = '__ERROR__'
 
-const loaderItem: any = () => ({ id: LOADER_TYPE, type: LOADER_TYPE })
 const errorItem: any = (error: string) => ({ id: ERROR_TYPE, type: ERROR_TYPE, error })
 
 function useChildrenWithHeaderAndFooter<S>(
@@ -207,20 +205,7 @@ export function List<S>({
   )
 
   const renderItem = useCallback(
-    ({
-      item,
-      index,
-    }: {
-      item: S | ReturnType<typeof loaderItem> | ReturnType<typeof errorItem>
-      index: number
-    }) => {
-      if ((item as ReturnType<typeof loaderItem>).type === LOADER_TYPE) {
-        return (
-          <Stack key='loader' fillHorizontal alignMiddle alignCenter padding='normal'>
-            <Spinner />
-          </Stack>
-        )
-      }
+    ({ item, index }: { item: S | ReturnType<typeof errorItem>; index: number }) => {
       if ((item as ReturnType<typeof errorItem>).type === ERROR_TYPE) {
         return (
           <Stack alignCenter alignMiddle fill padding='normal'>
@@ -257,7 +242,6 @@ export function List<S>({
             typeof searchBy === 'function' ? searchBy(item) : item[searchBy as any] || '',
           )
         })
-        .concat(loading && !isRefreshing ? loaderItem() : undefined)
         .concat(!loading && error != undefined ? errorItem(error) : undefined)
         .filter(i => i != null),
     )
@@ -289,9 +273,20 @@ export function List<S>({
     [children],
   )
   const ListFooterComponent = useMemo(
-    () => (listFooter ? <Fragment key='footer'>{listFooter}</Fragment> : null),
+    () => {
+      return (
+        <Fragment key='footer'>
+          {loading && !isRefreshing ? (
+            <Stack key='loader' fillHorizontal alignMiddle alignCenter padding='normal'>
+              <Spinner />
+            </Stack>
+          ) : null}
+          {listFooter ? <Fragment>{listFooter}</Fragment> : null}
+        </Fragment>
+      )
+    },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [children],
+    [children, loading, isRefreshing],
   )
 
   const renderSectionHeader = useCallback(

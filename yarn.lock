@@ -5716,31 +5716,31 @@ native-x-spacer@^1.0.0:
   dependencies:
     tachyons-react-native "^1.0.4"
 
-native-x-spinner@^1.0.2:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/native-x-spinner/-/native-x-spinner-1.0.4.tgz#a4645772c76f48e3b7c8b58f66c02c69b2dda557"
-  integrity sha512-aDB+O9E0taAsdCGbGQm/X8iq6a4l70qkLdfDHsNo+ZYYUb9Jy3JY7Ps8gTEM5C+j0qu9G9rAlhcvp5ScP8fiWQ==
-  dependencies:
-    native-x-theme "^1.0.9"
-    tachyons-react-native "^1.0.4"
-
-native-x-stack@^1.0.7:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/native-x-stack/-/native-x-stack-1.0.10.tgz#9ccb18d954460c0cc565d54d45617a6880df5147"
-  integrity sha512-HzV/3aUsmyKMHAmV/pHUY7pQZWlcU0oidH8t1XnXuyKH1hKueybrG9dAnmnKwbw5ti0JzNklnCL1j0Eo71xVfw==
-  dependencies:
-    native-x-theme "^1.0.9"
-    tachyons-react-native "^1.0.4"
-
-native-x-tappable@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/native-x-tappable/-/native-x-tappable-1.0.3.tgz#556889eb312ab9d08bc1c5615d3eff9dd3b39dfe"
-  integrity sha512-1hPHNSFSMO/ToPOvy0zUo/uUKuXAiiKXpe8HmXbw5cIx3CyV2patKYLY/hEPUml4NNsLV5aj9AFTNmKRn/E3Vg==
-
-native-x-text@^1.0.3:
+native-x-spinner@^1.0.5:
   version "1.0.5"
-  resolved "https://registry.yarnpkg.com/native-x-text/-/native-x-text-1.0.5.tgz#b5bba145ef20f924e047fb9b7d3fe21a26540719"
-  integrity sha512-bc9clVPqvrVzdLKgfO6rTbZSm0Ox8dh6yFNtqpPqmybqMxWXOXO7drffPFUVXia41tCFs59Uv6o995hItY8mtA==
+  resolved "https://registry.yarnpkg.com/native-x-spinner/-/native-x-spinner-1.0.5.tgz#573c51397e5118d85b0f800a6e498811502c79a0"
+  integrity sha512-JFGyghWJMwkq6jMpjuh8w06+7kJPfmC47bWdgpnDQ+5w596fVbuL5RhnQR60cSGhWD6KGxueBzV6rSbQwo9kzw==
+  dependencies:
+    native-x-theme "^1.0.9"
+    tachyons-react-native "^1.0.4"
+
+native-x-stack@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/native-x-stack/-/native-x-stack-1.0.11.tgz#2c0dbf12a6ae99e93e16445447662bc568b6cf00"
+  integrity sha512-AaoNmHwzoV7ryeXWd/WHtVkMq+qJTqNq7ml/smNByYfl/arhlNU7w5o119soFu1VfNO7PbktOSKFxsoF6QZnlA==
+  dependencies:
+    native-x-theme "^1.0.9"
+    tachyons-react-native "^1.0.4"
+
+native-x-tappable@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/native-x-tappable/-/native-x-tappable-1.0.4.tgz#80a301d46e515f5b7806d4428ee246333b190b05"
+  integrity sha512-kYYukllwvG2Q8fnpba1/ncbqQ8IkbL9m/0OCvqUer/w0FQt/pK+rW+zzLBvbo2do/AJF/Sc5pm5tPkN0PRSsiw==
+
+native-x-text@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/native-x-text/-/native-x-text-1.0.6.tgz#770eb3396b033dc409295f1dcf4d4c8f9dd50297"
+  integrity sha512-VhIx4UBRrf8vVEP8xbvENEeLwMsb7DfInINPt1wmcB28+dKO1gFmQxK3hYXXTTazcUkG5FD440z1gZtO85s2Bw==
   dependencies:
     native-x-theme "^1.0.9"
     tachyons-react-native "^1.0.4"
