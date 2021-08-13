@@ -318,7 +318,7 @@ export function List<S>({
   }, [horizontal])
 
   const renderEmptyComponent = useCallback(() => {
-    if (emptyMessage == undefined) {
+    if (emptyMessage == undefined || loading) {
       return null
     }
     if (typeof emptyMessage === 'function') {
