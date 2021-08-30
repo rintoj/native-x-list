@@ -100,6 +100,7 @@ function useChildrenWithHeaderAndFooter<S>(
 
 export interface ListProps<S> extends ContainerStyleProps {
   items: S[]
+  inverted?: boolean
   separator?: ReactNode
   children: ListRendererFn<S> | Array<ReactElement | ListRendererFn<S> | null>
   keyExtractor?: ((item: S) => string) | string
@@ -135,6 +136,7 @@ export function List<S>({
   keyExtractor,
   divider,
   horizontal,
+  inverted,
   groupBy,
   searchBy,
   searchText,
@@ -357,6 +359,7 @@ export function List<S>({
         renderItem={renderItem}
         refreshing={isRefreshing}
         horizontal={horizontal}
+        inverted={inverted}
         onRefresh={onRefresh}
         renderSectionHeader={renderSectionHeader}
         ListEmptyComponent={renderEmptyComponent}
@@ -387,6 +390,7 @@ export function List<S>({
         renderItem={renderItem}
         refreshing={isRefreshing}
         horizontal={horizontal}
+        inverted={inverted}
         onRefresh={onRefresh}
         onEndReached={onFetchNext}
         contentContainerStyle={contentContainerStyle}
