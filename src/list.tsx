@@ -26,6 +26,7 @@ import {
   ViewStyle,
 } from 'react-native'
 import { styles as s } from 'tachyons-react-native'
+import { useCombinedRefs } from './util'
 
 export type ListRendererFn<S> = (item: S, index?: number) => ReactElement | null
 
@@ -128,7 +129,7 @@ export interface ListProps<S> extends ContainerStyleProps {
   maintainVisibleContent?: boolean
 }
 
-export function List<S>({
+function ListComponent<S>({
   items,
   children,
   separator,
@@ -156,9 +157,9 @@ export function List<S>({
   stickySectionHeadersEnabled = true,
   maintainVisibleContent,
   ...props
-}: ListProps<S>) {
+}: ListProps<S>, ref?: Ref<FlatList<S>>) {
   const sectionListRef = useRef<SectionList<S>>()
-  const listRef = useRef<FlatList<S>>()
+  const listRef = useCombinedRefs<FlatList<S>>([ref || null])
   const [visibleItems, setVisibleItems] = useState(items)
   const { getColor } = useTheme()
   const dividerColor = getColor?.(COLOR.DIVIDER)
@@ -414,3 +415,5 @@ export function List<S>({
 
   return <View style={fill && styles.container}>{list}</View>
 }
+
+export const List = React.forwardRef(ListComponent)
