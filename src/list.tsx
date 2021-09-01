@@ -420,4 +420,6 @@ function ListComponent<S>({
   return <View style={fill && styles.container}>{list}</View>
 }
 
-export const List = React.forwardRef(ListComponent)
+export const List = React.forwardRef(ListComponent) as <S>(
+  props: ListProps<S> & { ref?: Ref<FlatList<S>> },
+) => ReturnType<typeof ListComponent>
