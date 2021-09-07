@@ -156,7 +156,7 @@ function ListComponent<S>({
   showScrollIndicator = true,
   columnWrapperStyle,
   onScroll,
-  stickySectionHeadersEnabled = true,
+  stickySectionHeadersEnabled = false,
   maintainVisibleContent,
   ...props
 }: ListProps<S>, ref?: Ref<FlatList<S>>) {
@@ -301,11 +301,9 @@ function ListComponent<S>({
         return props.renderSectionHeader(title)
       }
       return (
-        <View style={styles.header}>
-          <Text bold textColor={COLOR.SECONDARY}>
-            {title}
-          </Text>
-        </View>
+        <Stack padding='normal'>
+          <Text textColor={COLOR.TERTIARY}>{title}</Text>
+        </Stack>
       )
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
