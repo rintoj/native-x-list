@@ -35,7 +35,6 @@ const SCROLL_EVENT_THROTTLE = 16
 
 const styles = {
   container: [s.flex],
-  header: [s.theme.shadowBg, s.ph3, s.pv2, s.bb, s.theme.lightDividerBb],
   footer: [s.theme.shadowBg, s.pa3],
   contentContainerStyle: [s.pt2, s.theme.shadowBg],
   padding: {
@@ -156,7 +155,7 @@ function ListComponent<S>({
   showScrollIndicator = true,
   columnWrapperStyle,
   onScroll,
-  stickySectionHeadersEnabled = true,
+  stickySectionHeadersEnabled,
   maintainVisibleContent,
   ...props
 }: ListProps<S>, ref?: Ref<FlatList<S>>) {
@@ -301,11 +300,9 @@ function ListComponent<S>({
         return props.renderSectionHeader(title)
       }
       return (
-        <View style={styles.header}>
-          <Text bold textColor={COLOR.SECONDARY}>
-            {title}
-          </Text>
-        </View>
+        <Stack padding='normal'>
+          <Text textColor={COLOR.TERTIARY}>{title}</Text>
+        </Stack>
       )
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
