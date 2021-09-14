@@ -35,7 +35,6 @@ const SCROLL_EVENT_THROTTLE = 16
 
 const styles = {
   container: [s.flex],
-  header: [s.theme.shadowBg, s.ph3, s.pv2, s.bb, s.theme.lightDividerBb],
   footer: [s.theme.shadowBg, s.pa3],
   contentContainerStyle: [s.pt2, s.theme.shadowBg],
   padding: {
@@ -156,7 +155,7 @@ function ListComponent<S>({
   showScrollIndicator = true,
   columnWrapperStyle,
   onScroll,
-  stickySectionHeadersEnabled = false,
+  stickySectionHeadersEnabled,
   maintainVisibleContent,
   ...props
 }: ListProps<S>, ref?: Ref<FlatList<S>>) {
