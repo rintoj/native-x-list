@@ -37,7 +37,7 @@
     "native-x-spinner": "^1.0.7",
     "native-x-stack": "^1.0.12",
     "native-x-tappable": "^1.0.4",
-    "native-x-text": "^1.0.9",
+    "native-x-text": "^1.0.10",
     "tachyons-react-native": "^1.0.4"
   }
 }
