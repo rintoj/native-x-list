@@ -13,7 +13,6 @@ import React, {
   useCallback,
   useEffect,
   useMemo,
-  useRef,
   useState,
 } from 'react'
 import {
@@ -158,9 +157,9 @@ function ListComponent<S>({
   stickySectionHeadersEnabled,
   maintainVisibleContent,
   ...props
-}: ListProps<S>, ref?: Ref<FlatList<S>>) {
-  const sectionListRef = useRef<SectionList<S>>()
-  const listRef = useCombinedRefs<FlatList<S>>([ref || null])
+}: ListProps<S>, ref?: Ref<FlatList<S>> | Ref<SectionList<S>>,) {
+  const listRef = useCombinedRefs<FlatList<S>>([(ref as Ref<FlatList<S>>) || null])
+  const sectionListRef = useCombinedRefs<SectionList<S>>([(ref as Ref<SectionList<S>>) || null])
   const [visibleItems, setVisibleItems] = useState(items)
   const { getColor } = useTheme()
   const dividerColor = getColor?.(COLOR.DIVIDER)
@@ -418,5 +417,5 @@ function ListComponent<S>({
 }
 
 export const List = React.forwardRef(ListComponent) as <S>(
-  props: ListProps<S> & { ref?: Ref<FlatList<S>> },
+  props: ListProps<S> & { ref?: Ref<FlatList<S>> | Ref<SectionList<S>> },
 ) => ReturnType<typeof ListComponent>
