@@ -10,6 +10,7 @@ import React, {
   ReactElement,
   ReactNode,
   Ref,
+  RefObject,
   useCallback,
   useEffect,
   useMemo,
@@ -158,8 +159,9 @@ function ListComponent<S>({
   maintainVisibleContent,
   ...props
 }: ListProps<S>, ref?: ((instance: FlatList<S>|SectionList<S> | null) => void) | Ref<FlatList<S>> | Ref<SectionList<S>> | null) {
-  const sectionListRef = useCombinedRefs<SectionList<S>>([ref as Ref<SectionList<S>> || null])
-  const listRef = useCombinedRefs<FlatList<S>>([ref as Ref<FlatList<S>> || null])
+  const innerRef = useCombinedRefs<FlatList<S> | SectionList<S>>([(ref as any) || null])
+  const sectionListRef = innerRef as RefObject<SectionList<S>>
+  const listRef = innerRef as RefObject<FlatList<S>>
   const [visibleItems, setVisibleItems] = useState(items)
   const { getColor } = useTheme()
   const dividerColor = getColor?.(COLOR.DIVIDER)
