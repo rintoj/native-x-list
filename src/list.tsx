@@ -28,7 +28,7 @@ import {
 import { styles as s } from 'tachyons-react-native'
 import { useCombinedRefs } from './utils'
 
-export type ListRendererFn<S> = (item: S, index?: number) => ReactElement | null
+export type ListRendererFn<S> = (item: S, index: number) => ReactElement | null
 
 const ON_END_REACHED_THRESHOLD = 0.5
 const SCROLL_EVENT_THROTTLE = 16
@@ -120,7 +120,7 @@ export interface ListProps<S> extends ContainerStyleProps {
   numColumns?: number
   showScrollIndicator?: boolean
   columnWrapperStyle?: StyleProp<ViewStyle>
-  onSelectItem?: (props: { item: S; index?: number }) => void
+  onSelectItem?: (props: { item: S; index: number }) => void
   onRefresh?: () => void
   onFetchNext?: () => void
   onScrollToTopChange?: (scrollToTop: () => void) => void
